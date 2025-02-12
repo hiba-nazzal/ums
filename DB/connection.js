@@ -14,5 +14,6 @@ import { DataTypes, Sequelize } from 'sequelize';
     .catch( (error)=>{
         console.log("error to connect to database "+ error)
     });
+
     
   }

@@ -16,7 +16,8 @@ const UserModel = sequelize.define('User',
         },
         email:{
             type:DataTypes.STRING,
-            allowNull:false
+            allowNull:false,
+            unique:true
         },
         password:{
             type:DataTypes.STRING,
@@ -29,8 +30,16 @@ const UserModel = sequelize.define('User',
         profilPic:{
             type:DataTypes.STRING,
             allowNull:true
+        },
+        role:{
+            
+                type:DataTypes.ENUM('user','admin'),
+                defaultValue:'user',
+                allowNull:false
+            }
+
         }
-    }
+    
   );
  
   export default UserModel;
